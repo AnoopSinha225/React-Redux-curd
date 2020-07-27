@@ -43,13 +43,12 @@ input[type=text] {
     background-color: green;
     text-align: center;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
     font-size: 18px;
   }
   
-  a {
-    text-decoration: none;
-    font-size: 22px;
+  a {  
+    font-size: 20px;
     color: black;
   }
   
@@ -65,3 +64,6 @@ input[type=text] {
     text-align: center;
     display: inline-block;
   }
+
+  td{text-align: left;}
+  table{margin: 20px}

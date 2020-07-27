@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { saveUserDetails, save_edit_data } from '../../store/Action.js'
 
 class Users extends Component {
-
   constructor(props) {
     super(props);
 
@@ -64,7 +63,7 @@ class Users extends Component {
     let changeData = { ...this.state.editableData }
     changeData[event.target.name] = event.target.value;
     this.setState({ editableData: changeData });
- 
+
   }
 
   edit_Save = () => {
@@ -115,18 +114,29 @@ class Users extends Component {
             </div>
           }
         </div>
-
-        {
-          showUserDetail.map((item, index) => (
-            <div className="card" key={item.id}>
-              <h1><a href="javascript:void(0)" onClick={e => { this.currentItemIndex = index; this.setEditable(item) }}>{item.name}</a></h1>
-              <p className="title">{item.designation} </p>
-              <p>{item.skills}</p>
-              <p><button key={item.id} onClick={() => this.props.delItems(item.id)}>Delete</button></p>
-              {/* <p><button style={{color: 'yellow'}}  onClick={this.setEditable.bind(this,showUserDetail)}>Edit User</button></p> */}
-            </div>
-          ))
-        }
+        <div >
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Skills</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            {showUserDetail.map((item, index) => (
+              <tbody>
+                <tr>
+                  <td><a onClick={e => { this.currentItemIndex = index; this.setEditable(item) }}>{item.name}</a></td>
+                  <td>{item.designation}</td>
+                  <td>{item.skills}</td>
+                  <td><button key={item.id} onClick={() => this.props.delItems(item.id)}>Delete</button></td>
+                </tr>
+              </tbody>
+            ))
+            }
+          </table>
+        </div>
       </div>
     );
   }

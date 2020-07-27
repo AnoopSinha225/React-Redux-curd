@@ -4,20 +4,20 @@ const initialState = {
     userDetailsIs: [
         {
             id: 1,
-            name: 'ABC',
-            designation: 'TL',
-            skills: 'React Js, NodeJs  JS'
+            name: 'John Wick',
+            designation: 'Technical Engineer',
+            skills: 'React Js, NodeJs'
         },
         {
             id: 2,
-            name: 'SDF',
-            designation: 'SE',
-            skills: 'React Js, NodeJs angular JS'
+            name: 'Andrew Will',
+            designation: 'Software Engineer',
+            skills: ' NodeJs angular JS'
         },
         {
             id: 3,
-            name: 'XVZ',
-            designation: 'ASE',
+            name: 'Mike Willson',
+            designation: 'Associate S.Engineer',
             skills: 'React Js, angular JS'
         },
     ]
