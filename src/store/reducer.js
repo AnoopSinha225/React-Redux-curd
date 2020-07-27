@@ -51,28 +51,8 @@ const rootReducer = (state = initialState, action) => {
                 userDetailsIs: updateUser
             }
 
-
         default:
             return initialState;
-
-
-
-        //    const userDetailsIs = update(userDetailsIs, {
-        //     [action.payload.index]:{
-        //         $set: [action.payload.save_editData]
-        //     }
-        // });
-
-
-        // userDetailsIs: state.userDetailsIs.splice(action.payload.index, action.payload.save_editData)
-
-        // userDetailsIs: ( () => {
-        //      state.userDetailsIs.splice(action.payload.index, 1, action.payload.save_editData);
-        //      console.log(state.userDetailsIs);
-        //     return state.userDetailsIs;
-        // })()
-
-
     }
 
 }

@@ -10,10 +10,8 @@ class Users extends Component {
     super(props);
 
     this.state = {
-
       buttonText: 'Add New User',
       editableData: {},
-      // isShowUser: false,
       users: this.props.showUserDetail,
     }
     this.currentItemIndex = undefined;
@@ -53,7 +51,7 @@ class Users extends Component {
   setEditable = (item) => {
     console.log(item)
     this.setState({
-      isShowEditUser: true, //!this.state.isShowEditUser,
+      isShowEditUser: true,
       isShowUser: false,
       buttonText: 'Add New User',
       editableData: { ...item }
@@ -66,13 +64,12 @@ class Users extends Component {
     let changeData = { ...this.state.editableData }
     changeData[event.target.name] = event.target.value;
     this.setState({ editableData: changeData });
-    // console.log(changeData);
+ 
   }
 
   edit_Save = () => {
     let save_editData = this.state.editableData
     this.props.save_edit_data(save_editData, this.currentItemIndex);
-    // console.log(save_editData);
   }
 
 
@@ -80,9 +77,6 @@ class Users extends Component {
 
     const { buttonText, isShowUser, isShowEditUser } = this.state;
     const showUserDetail = this.props.showUserDetail;
-
-    // console.log("this.props", showUserDetail, "render ran");
-    // console.log(showUserDetail);
 
     return (
       <div style={{ marginTop: '20px' }}>

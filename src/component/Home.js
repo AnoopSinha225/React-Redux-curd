@@ -5,7 +5,7 @@ const Home = () => {
 
     <div>
       <h1>Your Home</h1>
-      <h4> Go to Users Tab</h4>
+      <h4> Go to "Users" Tab for crud task</h4>
     </div>
 
   );
