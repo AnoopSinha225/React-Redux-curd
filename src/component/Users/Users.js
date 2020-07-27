@@ -36,6 +36,9 @@ class Users extends Component {
       return
     }
     this.props.saveUserDetails(saveDetails);
+    this.setState({
+      isShowUser: !this.state.isShowUser
+    })
 
   }
 
@@ -55,7 +58,6 @@ class Users extends Component {
       buttonText: 'Add New User',
       editableData: { ...item }
     })
-
   }
 
   handleChange_edit = (event) => {
@@ -69,6 +71,9 @@ class Users extends Component {
   edit_Save = () => {
     let save_editData = this.state.editableData
     this.props.save_edit_data(save_editData, this.currentItemIndex);
+    this.setState({
+      isShowEditUser: !this.state.isShowEditUser
+    })
   }
 
 

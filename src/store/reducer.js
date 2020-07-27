@@ -10,7 +10,7 @@ const initialState = {
         },
         {
             id: 2,
-            name: 'Andrew Will',
+            name: 'Andrew Wills',
             designation: 'Software Engineer',
             skills: ' NodeJs angular JS'
         },
