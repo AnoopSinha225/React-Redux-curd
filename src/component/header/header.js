@@ -7,6 +7,7 @@ const Header = () => {
         <div className="topnav">
             <NavLink to="/home" exact={true}  >Home</NavLink>
             <NavLink to="/users" >Users</NavLink>
+            <NavLink to="/news" >News</NavLink>
             <NavLink to="/about">About</NavLink>
         </div>
     );

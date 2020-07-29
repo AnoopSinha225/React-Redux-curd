@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Users from './component/Users/Users';
 import Home from './component/Home';
+import News from './component/News'
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/home" component={Home} />
           <Route path="/users" component={Users} />
+          <Route path="/news" component={News} />
           <Route path="/about" render={() => <h5>This is about us page </h5>} />
         </div>
       </BrowserRouter>
